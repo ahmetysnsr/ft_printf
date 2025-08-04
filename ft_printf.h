@@ -6,15 +6,12 @@
 /*   By: asari <asari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 15:16:10 by asari             #+#    #+#             */
-/*   Updated: 2025/07/21 22:35:05 by asari            ###   ########.fr       */
+/*   Updated: 2025/08/04 19:40:25 by asari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-
-# include <stdarg.h>
-# include <unistd.h>
 
 int	ft_printf(const char *format, ...);
 

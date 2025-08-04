@@ -6,11 +6,12 @@
 /*   By: asari <asari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 15:15:26 by asari             #+#    #+#             */
-/*   Updated: 2025/08/04 18:53:43 by asari            ###   ########.fr       */
+/*   Updated: 2025/08/04 19:40:40 by asari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdarg.h>
 
 static int	format_handler(char s, va_list args)
 {

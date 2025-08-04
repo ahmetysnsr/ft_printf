@@ -6,11 +6,12 @@
 /*   By: asari <asari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 13:25:11 by asari             #+#    #+#             */
-/*   Updated: 2025/08/04 19:22:31 by asari            ###   ########.fr       */
+/*   Updated: 2025/08/04 19:40:59 by asari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <unistd.h>
 
 static int	ft_putnbr_hex_ptr(size_t n)
 {
