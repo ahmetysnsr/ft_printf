@@ -6,7 +6,7 @@
 /*   By: asari <asari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 13:25:11 by asari             #+#    #+#             */
-/*   Updated: 2025/08/04 19:40:59 by asari            ###   ########.fr       */
+/*   Updated: 2025/08/04 20:33:38 by asari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,18 +38,21 @@ static int	ft_putnbr_hex_ptr(size_t n)
 int	ft_putptr(void *ptr)
 {
 	int	count;
+	int	temp;
 
 	count = 0;
 	if (!ptr)
 		count += ft_putstr("(nil)");
 	else
 	{
-		count += ft_putstr("0x");
-		if (count == -1)
+		temp = ft_putstr("0x");
+		if (temp == -1)
 			return (-1);
-		count += ft_putnbr_hex_ptr((size_t)ptr);
-		if (count == 1)
+		count += temp;
+		temp = ft_putnbr_hex_ptr((size_t)ptr);
+		if (temp == -1)
 			return (-1);
+		count += temp;
 	}
 	return (count);
 }
