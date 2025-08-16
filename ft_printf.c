@@ -6,7 +6,7 @@
 /*   By: asari <asari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 15:15:26 by asari             #+#    #+#             */
-/*   Updated: 2025/08/04 19:40:40 by asari            ###   ########.fr       */
+/*   Updated: 2025/08/16 18:26:53 by asari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@ static int	format_handler(char s, va_list args)
 		return (ft_putchar('%'));
 	else
 	{
-		if (ft_putchar('%') == -1 || ft_putchar(s) == -1)
+		if (ft_putchar('%') == -1)
+			return (-1);
+		else if (ft_putchar(s) == -1)
 			return (-1);
 		return (2);
 	}
