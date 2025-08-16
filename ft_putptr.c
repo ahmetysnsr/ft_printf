@@ -6,7 +6,7 @@
 /*   By: asari <asari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 13:25:11 by asari             #+#    #+#             */
-/*   Updated: 2025/08/04 20:33:38 by asari            ###   ########.fr       */
+/*   Updated: 2025/08/16 18:18:49 by asari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,12 @@ int	ft_putptr(void *ptr)
 
 	count = 0;
 	if (!ptr)
-		count += ft_putstr("(nil)");
+	{
+		temp = ft_putstr("(nil)");
+		if (temp == -1)
+			return (-1);
+		count += temp;
+	}
 	else
 	{
 		temp = ft_putstr("0x");
